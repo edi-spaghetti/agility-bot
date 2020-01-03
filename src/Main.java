@@ -11,7 +11,7 @@ import org.dreambot.api.wrappers.items.GroundItem;
         author="RonMan",
         description="A Cheeky Script to Avoid 72 hours of mindless repetition",
         category = Category.AGILITY,
-        version = 2.01,
+        version = 2.03,
         name = "Cheeky Agility"
 )
 
@@ -77,14 +77,14 @@ public class Main extends AbstractScript {
 
     // Canifis
     Obstacle[] agilityCourse = new Obstacle[]{
-            new Obstacle(3472, 3510, 3512, 3469, 0, "Tall tree", "Climb", 14843),
-            new Obstacle(3505, 3497, 3509, 3492, 2, "Gap", "Jump", 14844),
-            new Obstacle(3497, 3506, 3503, 3504, 2, "Gap", "Jump", 14845),
-            new Obstacle(3487, 3504, 3492, 3499, 2, "Gap", "Jump", 14848),
-            new Obstacle(3475, 3499, 3479, 3492, 2, "Gap", "Jump", 14846),
-            new Obstacle(3478, 3486, 3484, 3481, 2, "Pole-vault", "Vault", 14894),
-            new Obstacle(3494, 3475, 3489, 3469, 3, "Gap", "Jump", 14847),
-            new Obstacle(3515, 3482, 3511, 3479, 2, "Gap", "Jump", 14897),
+            new Obstacle(3470, 3512, 3516, 3469, 0, "Tall tree", "Climb", 14843),
+            new Obstacle(3503, 3499, 3511, 3490, 2, "Gap", "Jump", 14844),
+            new Obstacle(3495, 3508, 3505, 3502, 2, "Gap", "Jump", 14845),
+            new Obstacle(3485, 3506, 3494, 3497, 2, "Gap", "Jump", 14848),
+            new Obstacle(3473, 3501, 3481, 3490, 3, "Gap", "Jump", 14846),
+            new Obstacle(3478, 3488, 3486, 3479, 2, "Pole-vault", "Vault", 14894),
+            new Obstacle(3485, 3480, 3505, 3467, 3, "Gap", "Jump", 14847),
+            new Obstacle(3507, 3484, 3517, 3473, 2, "Gap", "Jump", 14897),
     };
 
     int currentIndex = -1;
