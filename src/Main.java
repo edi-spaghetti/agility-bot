@@ -11,7 +11,7 @@ import org.dreambot.api.wrappers.items.GroundItem;
         author="RonMan",
         description="A Cheeky Script to Avoid 72 hours of mindless repetition",
         category = Category.AGILITY,
-        version = 1.28,
+        version = 2.01,
         name = "Cheeky Agility"
 )
 
@@ -46,7 +46,7 @@ public class Main extends AbstractScript {
     }
 
     // Varrock
-    //Obstacle[] agilityCourse2 = new Obstacle[]{
+    //Obstacle[] agilityCourse = new Obstacle[]{
     //    new Obstacle(3128,3430, 3245, 3388, 0, "Rough wall", "Climb", 14412),
     //    new Obstacle(3214,3419, 3219, 3412, 3, "Clothes line", "Cross", 14413),
     //    new Obstacle(3201,3417, 3208, 3413, 3, "Gap", "Leap", 14414),
@@ -59,20 +59,32 @@ public class Main extends AbstractScript {
     //};
 
     // Falador
+    //Obstacle[] agilityCourse = new Obstacle[]{
+    //    new Obstacle(3007, 3368, 3053, 3332, 0, "Rough wall", "Climb", 14898),
+    //    new Obstacle(3036, 3343, 3040, 3342, 3, "Tightrope", "Cross", 14899),
+    //    new Obstacle(3044, 3349, 3051, 3341, 3, "Hand holds", "Cross", 14901),
+    //    new Obstacle(3048, 3358, 3050, 3357, 3, "Gap", "Jump", 14903),
+    //    new Obstacle(3045, 3367, 3048, 3361, 3, "Gap", "Jump", 14904),
+    //    new Obstacle(3034, 3364, 3041, 3361, 3, "Tightrope", "Cross", 14905),
+    //    new Obstacle(3026, 3354, 3029, 3352, 3, "Tightrope", "Cross", 14911),
+    //    new Obstacle(3009, 3358, 3021, 3353, 3, "Gap", "Jump", 14919),
+    //    new Obstacle(3016, 3349, 3022, 3343, 3, "Ledge", "Jump", 14920),
+    //    new Obstacle(3011, 3346, 3014, 3344, 3, "Ledge", "Jump", 14921),
+    //    new Obstacle(3009, 3342, 3013, 3335, 3, "Ledge", "Jump", 14923),
+    //    new Obstacle(3012, 3334, 3017, 3331, 3, "Ledge", "Jump", 14924),
+    //    new Obstacle(3019, 3335, 3024, 3332, 3, "Ledge", "Jump", 14925),
+    //};
+
+    // Canifis
     Obstacle[] agilityCourse = new Obstacle[]{
-        new Obstacle(3007, 3368, 3053, 3332, 0, "Rough wall", "Climb", 14898),
-        new Obstacle(3036, 3343, 3040, 3342, 3, "Tightrope", "Cross", 14899),
-        new Obstacle(3044, 3349, 3051, 3341, 3, "Hand holds", "Cross", 14901),
-        new Obstacle(3048, 3358, 3050, 3357, 3, "Gap", "Jump", 14903),
-        new Obstacle(3045, 3367, 3048, 3361, 3, "Gap", "Jump", 14904),
-        new Obstacle(3034, 3364, 3041, 3361, 3, "Tightrope", "Cross", 14905),
-        new Obstacle(3026, 3354, 3029, 3352, 3, "Tightrope", "Cross", 14911),
-        new Obstacle(3009, 3358, 3021, 3353, 3, "Gap", "Jump", 14919),
-        new Obstacle(3016, 3349, 3022, 3343, 3, "Ledge", "Jump", 14920),
-        new Obstacle(3011, 3346, 3014, 3344, 3, "Ledge", "Jump", 14921),
-        new Obstacle(3009, 3342, 3013, 3335, 3, "Ledge", "Jump", 14923),
-        new Obstacle(3012, 3334, 3017, 3331, 3, "Ledge", "Jump", 14924),
-        new Obstacle(3019, 3335, 3024, 3332, 3, "Ledge", "Jump", 14925),
+            new Obstacle(3472, 3510, 3512, 3469, 0, "Tall tree", "Climb", 14843),
+            new Obstacle(3505, 3497, 3509, 3492, 2, "Gap", "Jump", 14844),
+            new Obstacle(3497, 3506, 3503, 3504, 2, "Gap", "Jump", 14845),
+            new Obstacle(3487, 3504, 3492, 3499, 2, "Gap", "Jump", 14848),
+            new Obstacle(3475, 3499, 3479, 3492, 2, "Gap", "Jump", 14846),
+            new Obstacle(3478, 3486, 3484, 3481, 2, "Pole-vault", "Vault", 14894),
+            new Obstacle(3494, 3475, 3489, 3469, 3, "Gap", "Jump", 14847),
+            new Obstacle(3515, 3482, 3511, 3479, 2, "Gap", "Jump", 14897),
     };
 
     int currentIndex = -1;
