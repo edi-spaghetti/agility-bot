@@ -1,4 +1,5 @@
 import org.dreambot.api.methods.map.Area;
+import org.dreambot.api.methods.map.Tile;
 import org.dreambot.api.methods.skills.Skill;
 import org.dreambot.api.script.AbstractScript;
 import org.dreambot.api.script.Category;
@@ -10,7 +11,7 @@ import org.dreambot.api.wrappers.items.GroundItem;
         author="RonMan",
         description="A Cheeky Script to Avoid 72 hours of mindless repetition",
         category = Category.AGILITY,
-        version = 1.24,
+        version = 1.28,
         name = "Cheeky Agility"
 )
 
@@ -103,6 +104,11 @@ public class Main extends AbstractScript {
         return getGameObjects().closest(gameObject -> gameObject != null && gameObject.getID() == agilityCourse[getNthIndex(n)].id  && gameObject.hasAction(agilityCourse[getNthIndex(n)].action));
     }
 
+    public void goNearNextObstacle(GameObject obs) {
+        Tile tile = agilityCourse[currentIndex].area.getNearestTile(obs).getTile();
+        getWalking().walkOnScreen(tile);
+    }
+
     public void doNextObstacle() {
 
         if (agilityCourse[currentIndex].area.contains(getLocalPlayer())) {
@@ -117,7 +123,7 @@ public class Main extends AbstractScript {
                         if (!getLocalPlayer().isMoving()) {
                             log("resetting isClicked and getting closer");
                             agilityCourse[currentIndex].isClicked = false;
-                            getWalking().walk(nextObstacle.getTile());
+                            goNearNextObstacle(nextObstacle);
                         }
                     } else {
                         log("doing a thing!");
@@ -126,14 +132,14 @@ public class Main extends AbstractScript {
                             sleepUntil(() -> agilityCourse[getNthIndex(1)].area.contains(getLocalPlayer()), randBetween(6000, 9000));
                             agilityCourse[currentIndex].isClicked = false;
                         } else {
-                            getWalking().walk(nextObstacle.getTile());
+                            goNearNextObstacle(nextObstacle);
                         }
                     }
                 }
             } else {
                 if (!getLocalPlayer().isMoving()) {
                     log("going to next obstacle");
-                    getWalking().walk(nextObstacle.getTile());
+                    goNearNextObstacle(nextObstacle);
                 } else {
                     log("player is still moving");
                 }
